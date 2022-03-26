@@ -1,1 +1,5 @@
 # MobilliumTMDB
+
+Mvvm
+Glide
+Retrofit
