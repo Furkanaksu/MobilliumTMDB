@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.furkan.mobilliumcase.ui.fragments.MainFragment"
+        android:label="view_fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_detail"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="myArg"
+            app:argType="com.furkan.mobilliumcase.data.model.MoviesResult"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.furkan.mobilliumcase.ui.fragments.DetailFragment"
+        android:label="view_fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detail_to_home"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="myArg"
+            app:argType="com.furkan.mobilliumcase.data.model.MoviesResult"
+            />
+    </fragment>
+</navigation>
